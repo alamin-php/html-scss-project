@@ -9,9 +9,15 @@
     width: 1200px;
     margin: 0 auto;
 }
+.fix::before, .fix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
 a{
     text-decoration: none;
     color: $black;
+    transition: .3s;
 }
 img{
     max-width: 100%;
@@ -19,6 +25,51 @@ img{
 }
 ul{
     list-style: none;
+}
+
+/* Background CSS*/
+.bg{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: $black;
+        opacity: .75;
+        z-index: -1;
+    }
+}
+
+/* Button CSS*/
+
+.btn{
+    padding: 10px 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 3px;
+    color: $white;
+    &.box-btn{
+        background-color: $primary_color;
+        transition: .3s;
+        &:hover{
+            background-color: $black;
+        }
+    }
+    &.border-btn{
+        border: 2px solid $primary_color;
+        transition: .3s;
+        padding: 8px 40px;
+        &:hover{
+            border: 2px solid $black;
+        }
+    }
 }
 
 /* Margin and Padding*/
