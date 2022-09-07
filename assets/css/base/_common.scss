@@ -1,39 +1,46 @@
 @import 'color';
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.main{
+.main {
     width: 1200px;
     margin: 0 auto;
 }
-.fix::before, .fix::after{
+
+.fix::before,
+.fix::after {
     content: "";
     clear: both;
     display: table;
 }
-a{
+
+a {
     text-decoration: none;
     color: $black;
     transition: .3s;
 }
-img{
+
+img {
     max-width: 100%;
     vertical-align: middle;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
 /* Background CSS*/
-.bg{
+.bg {
     background-position: center;
     background-size: cover;
     position: relative;
     z-index: 2;
-    &::before{
+
+    &::before {
         content: "";
         position: absolute;
         width: 100%;
@@ -48,50 +55,88 @@ ul{
 
 /* Button CSS*/
 
-.btn{
-    padding: 10px 40px;
+.btn {
+    padding: 10px 30px;
     text-transform: capitalize;
     font-size: 18px;
     display: inline-block;
     border-radius: 3px;
     color: $white;
-    &.box-btn{
+
+    &.box-btn {
         background-color: $primary_color;
         transition: .3s;
-        &:hover{
+
+        &:hover {
             background-color: $black;
         }
     }
-    &.border-btn{
+
+    &.border-btn {
         border: 2px solid $primary_color;
         transition: .3s;
         padding: 8px 40px;
-        &:hover{
+
+        &:hover {
             border: 2px solid $black;
         }
+    }
+}
+
+/* Section Title*/
+
+.section-title {
+    margin-bottom: 60px;
+
+    h4 {
+        text-transform: capitalize;
+        font-size: 40px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 25px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background: $primary_color;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    p {
+        width: 500px;
+        margin: 0 auto;
     }
 }
 
 /* Margin and Padding*/
 
 @for $i from 1 through 10 {
-    .pt-#{$i * 10}{
+    .pt-#{$i * 10} {
         padding-top: $i * 10px;
     }
-    .pb-#{$i * 10}{
+
+    .pb-#{$i * 10} {
         padding-bottom: $i * 10px;
     }
-    .mt-#{$i * 10}{
+
+    .mt-#{$i * 10} {
         margin-top: $i * 10px;
     }
-    .mb-#{$i * 10}{
+
+    .mb-#{$i * 10} {
         margin-bottom: $i * 10px;
     }
 }
 
 $list: left, center, right, justify;
+
 @each $i in $list {
-    .text-#{$i}{
+    .text-#{$i} {
         text-align: $i;
     }
 }

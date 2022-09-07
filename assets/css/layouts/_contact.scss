@@ -1,0 +1,73 @@
+/* Contact css*/
+.contact-area {
+    background-color: $bg_gray;
+
+    .single-address {
+        width: 380px;
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        background-color: $white;
+        padding: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        i {
+            font-size: 22px;
+            color: $primary_color;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-top: 5px;
+
+            span {
+                display: block;
+                text-transform: lowercase;
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .contact-form {
+        width: 670px;
+        float: left;
+        margin-right: 30px;
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px 16px;
+            border: 1px solid $border_gray;
+            margin: 5px 0px;
+            outline: oldlace;
+            font-size: 14px;
+        }
+
+        input[type='submit'] {
+            width: auto;
+            background-color: $primary_color;
+            color: $white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            padding: 10px 40px;
+        }
+    }
+
+    .contact-map {
+        width: 500px;
+        float: left;
+
+        iframe {
+            width: 100%;
+            border: 1px solid #ddd;
+            height: 330px;
+            margin-top: 5px;
+        }
+    }
+}

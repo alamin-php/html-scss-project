@@ -1,0 +1,48 @@
+/* Blog css */
+.blog-area {
+    .blog-img {
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        transition: .3s;
+    }
+
+    .single-blog {
+        width: 380px;
+        float: left;
+        margin-right: 30px;
+        overflow: hidden;
+        background-color: $bg_gray;
+        &:hover{
+            .blog-img{
+                transform: scale(1.1);
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .blog-content {
+            border: 1px solid $border_gray;
+            padding: 20px;
+
+            h4 {
+                text-transform: capitalize;
+                font-size: 22px;
+                font-weight: 500;
+            }
+
+            p {
+                margin: 20px 0;
+            }
+            a{
+                color: $primary_color;
+                &:hover{
+                    color: $black;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,30 @@
+/* Porffolio CSS*/
+.portfolio-area {
+    .single-portfolio {
+        width: 380px;
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        h4 {
+            position: absolute;
+            background: #444;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            padding: 10px 0px;
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/* services css*/
+.services-area {
+    background-color: $bg_gray;
+
+    .single-service {
+        width: 380px;
+        float: left;
+        background-color: $white;
+        margin-right: 30px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid $border_gray;
+        transition: .3s;
+        &:hover{
+            border: 1px solid $primary_color;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        i {
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid $border_gray;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            transition: .3s;
+            &:hover{
+                background-color: $primary_color;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+
+        h4 {
+            text-transform: capitalize;
+            font-size: 22px;
+            margin: 20px 0;
+        }
+    }
+}
